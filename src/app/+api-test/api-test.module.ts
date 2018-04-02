@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { ApiTestComponent } from './api-test.component';
 import { ApiTestRoutingModule } from './api-test-routing.module';
+import { ApiTestService } from './api-test.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    ApiTestRoutingModule
+    ApiTestRoutingModule,
+    HttpModule
   ],
-  declarations: [ApiTestComponent]
+  declarations: [ApiTestComponent],
+  providers:[ApiTestService]
 })
 export class ApiTestModule { }
